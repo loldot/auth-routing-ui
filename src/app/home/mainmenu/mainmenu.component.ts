@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mainmenu',
-  template: `
-    <p>
-      mainmenu works!
-    </p>
-  `,
+  templateUrl:'./mainmenu.template.html',
   styles: []
 })
 export class MainmenuComponent implements OnInit {
