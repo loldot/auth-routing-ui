@@ -7,6 +7,9 @@ import { HomeModule } from './home/home.module';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: MainmenuComponent },
+  { path: 'computers', loadChildren: './computers/computers.module#ComputersModule' },
+  { path: 'users', loadChildren: './users/users.module#UsersModule' },
+  { path: 'misc', loadChildren: './misc/misc.module#MiscModule' },
 ];
 
 @NgModule({

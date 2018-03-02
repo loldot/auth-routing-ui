@@ -1,3 +1,14 @@
-<label>Sett bruker</label>
-<input ngModel="userName" type="text" />
-<button (click)="SetUser()">ok</button>
+<label>Sett rolle</label>
+<input [(ngModel)]="role" type="text" />
+<button (click)="setRole()">ok</button>
+
+<div *ngFor="let nav of menu">
+    <h3>{{nav.topic}}</h3>
+    <ul>
+        <ng-container *ngFor="let l of nav.links">
+            <li *ngIf="hasAccess(l)">
+                <a [routerLink]="l.route">{{l.text}}</a>
+            </li>
+        </ng-container>
+    </ul>
+</div>
