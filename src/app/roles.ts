@@ -7,6 +7,7 @@ export class Roles {
     public static hasRole(requiredRole:string, userRole?: string) : boolean{
         if(!userRole)
             userRole = localStorage.getItem('current_user.role');
+            
         return requiredRole == 'none' || requiredRole.startsWith(userRole);
     }
 }
